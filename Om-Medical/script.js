@@ -10,3 +10,4 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     document.getElementById("navLinks").classList.remove("active");
   });
 });
+
