@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,9 +18,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
 
-
-
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./chatbot/style.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -165,11 +166,72 @@
 </section>
 
 <!-- Chatbot Button -->
-<button class="chatbot-btn rounded-circle" onclick="openChatbot()">
-  <i class="fa-solid fa-comments"></i>
-</button>
+<!-- Sticky Chat Button -->
+<div id="chatBtn" class="chat-btn">💬</div>
+
+<!-- Chat Panel -->
+<div id="chatBox" class="chat-box">
+    <div class="chat-header">
+        Medical Assistant 🤖
+        <span id="closeChat">✖</span>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+        <div class="message bot">
+            Hello 👋 How can I help you today?
+        </div>
+    </div>
+
+    <div class="chat-footer">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button id="sendBtn">Send</button>
+    </div>
+</div>
 
 
+<br>
+<footer class="bg-primary text-white pt-4 pb-3 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-4">
+        <h5 class="fw-bold">OM Medical</h5>
+        <p class="small">
+          Trusted medical store in Ahmedabad providing medicines,
+          consultation, and home delivery.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+          <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h6 class="fw-bold">Contact</h6>
+        <p class="small mb-1">New Chandkheda, Ahmedabad</p>
+        <p class="small mb-1">+91 92279 95049</p>
+        <p class="small">⏰ Mon–Sat: 9AM – 10PM</p>
+      </div>
+
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center small">
+      © 2026 OM Medical. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+
+<div id="whatsapp-widget"></div>
 <!-- WhatsApp Button -->
 <a href="https://wa.me/919227995049" target="_blank" class="whatsapp-btn rounded-circle">
   <i class="fa-brands fa-whatsapp"></i>
