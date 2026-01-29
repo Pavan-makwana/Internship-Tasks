@@ -1,11 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OM Medical</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OM Medical</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">OM Medical</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="tel:+919999999999" class="cta-btn">Call Now</a>
+        </li>
+      </ul>
+
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>OM Medical</h1>
+        <p>Ahmedabad • Trusted Medical Store</p>
+        <a href="#contact" class="btn">Visit Store</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <h2>About Us</h2>
+      <p>
+        Company history Mission, vision, values Clinic philosophy Certifications
+        or achievements Founded in 2018, OM Medical was established with a
+        vision to provide accessible, reliable, and high-quality healthcare to
+        individuals and families in our community. From the very beginning, our
+        focus has been on combining medical excellence with compassionate,
+        patient-centered care. Our experienced medical team delivers reliable
+        care in a welcoming and supportive environment. At OM Medical, your
+        health, comfort, and trust are always our top priorities.
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <h2>Our Services</h2>
+      <div class="service-box">
+        <div class="card">
+          <h3>Medicines</h3>
+          <br>
+          <p>We provide a wide range of high-quality prescription and over-the-counter medicines sourced from trusted manufacturers. Our pharmacy team ensures safe dispensing, proper storage, and guidance on correct usage so you receive effective and reliable treatment.</p>
+        </div>
+        <div class="card">
+          <h3>Consultation</h3>
+          <br>
+          <p>Our qualified healthcare professionals offer personalized medical consultations for diagnosis, treatment, and preventive care. We take time to understand your concerns and create tailored care plans to support your health and well-being.</p>
+        </div>
+        <div class="card">
+          <h3>Home Delivery</h3>
+          <br>
+          <p>OM Medical offers convenient home delivery of medicines and healthcare products. Our fast and reliable delivery service ensures you receive your medications safely and on time, right at your doorstep.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        GF-2, Madhuram Flora 2, opp. AYODHYA NAGARI, NEW, Chandkheda, Ahmedabad,
+        Gujarat 382424
+      </p>
+      <p>+91 99999 99999</p>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.2303422200207!2d72.56389034103356!3d23.125254325382055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83c20ba50035%3A0x25cab3763d65295c!2sOM%20MEDICAL%20STORE%20IN%20NEW%20CHANDKHEDA!5e0!3m2!1sen!2sin!4v1769671182212!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- Sticky WhatsApp -->
+    <a href="https://wa.me/919999999999" target="_blank" class="whatsapp-btn">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
 </html>
