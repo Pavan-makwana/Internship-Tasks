@@ -7,11 +7,32 @@ body {
   padding-top: 72px;
 }
 
-/* Hero */
+/* hero Section */
 .hero-section {
-  min-height: 100vh;
-  background: linear-gradient(to right, #e0e7ff, #ffffff);
+  color: white;
+  background-image: url("/img/Banner.webp");
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+/*  Mobile view */
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: 120vh;          
+    background-size: cover;     
+    background-position: center top;
+  }
+}
+
+/*  Desktop view */
+@media (min-width: 768px) {
+  .hero-section {
+    min-height: 100vh;
+    background-size: cover;    
+    background-position: center;
+  }
+}
+
 
 /* WhatsApp Button */
 .whatsapp-btn {
