@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Pharma Retail Stores</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <style>
+        :root {
+            --color-primary-dark: #162153;
+        }
+
+        body {
+            background: #f8f9fa;
+            color: #212529;
+        }
+
+        header {
+            background-color: var(--color-primary-dark);
+        }
+
+        .store-card {
+            cursor: pointer;
+            transition: box-shadow 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+        }
+
+        .store-card:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .store-card.active {
+            border: 1px solid #162153 !important;
+            box-shadow: 0 0.75rem 1.25rem rgba(22, 33, 83, 0.25);
+        }
+
+        .btn-primary {
+            background-color: #162153;
+            border-color: #162153;
+        }
+
+        .btn-primary:hover {
+            background-color: #10173a;
+            border-color: #10173a;
+        }
+
+        .btn-outline-primary {
+            color: #162153;
+            border-color: #162153;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #162153;
+            color: #ffffff;
+        }
+
+        .badge.rounded-pill {
+            border-color: #162153 !important;
+            color: #162153 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm mb-5">
+            <div class="container">
+                <a class="navbar-brand fw-bold " href="./index.html">
+                    NextGen Pharmacy
+                </a>
+
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav w-100 d-flex justify-content-between align-items-center nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Product.html">Product</a>
+                        </li>
+
+                        <!-- Retail Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Retail
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li>
+                                    <a class="dropdown-item" href="./Retail.html?city=newyork">New York</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./Retail.html?city=newjersey">New Jersey</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./Retail.html?city=california">California</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Contact.html">Contact</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3">
+                            <a href="tel:+919227995049" class="btn  rounded-pill px-4"
+                                style="background-color: var(--primary-dark);color: white;">
+                                Call Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <header class="text-white py-3 mt-5 mb-4 shadow-sm">
+        <div class="container text-center">
+            <h1 class="h3 mb-1">PharmaPlus Retail Stores</h1>
+            <p class="mb-0 small">
+                Find your nearest store, view directions on the map, and contact us instantly.
+            </p>
+        </div>
+    </header>
+
+    <main class="container pb-4">
+        <div class="row g-3">
+            <section class="col-lg-5 mb-3">
+                <div id="storeList" class="d-flex flex-column gap-3"></div>
+            </section>
+
+            <section class="col-lg-7">
+                <div class="card shadow-sm">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="fw-semibold small">Store location</div>
+                            <div class="text-muted small" id="mapStoreName">
+                                Select a store from the list
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm" id="openInMapsBtn" type="button">
+                            <span class="me-1">📍</span> Open in Maps
+                        </button>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <iframe id="storeMap" src="https://www.google.com/maps/embed?pb=" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-white pt-4 pb-3 mt-auto" style="background-color: #162153;">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold">NextGen Pharmacy</h5>
+                    <p class="small">
+                        Trusted medical store providing medicines, consultation, and home
+                        delivery.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6 class="fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="./index.html" class="text-white text-decoration-none">Home</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="text-white text-decoration-none">About</a>
+                        </li>
+                        <li>
+                            <a href="./Product.html" class="text-white text-decoration-none">Products</a>
+                        </li>
+                        <li>
+                            <a href="./Retail.html" class="text-white text-decoration-none">Retail</a>
+                        </li>
+                        <li>
+                            <a href="./Contact.html" class="text-white text-decoration-none">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6 class="fw-bold">Contact</h6>
+                    <p class="small mb-1">New Chandkheda, Ahmedabad</p>
+                    <p class="small mb-1">+91 92279 95049</p>
+                    <p class="small">Mon–Sat: 9AM – 10PM</p>
+                </div>
+            </div>
+
+            <hr class="border-light" />
+            <div class="text-center small">
+                © 2026 NextGen-Pharmacy Pvt Limited. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const stores = [
+            {
+                id: 1,
+                state: "New Jersey",
+                name: "PharmaPlus New Jersey",
+                address: "5445 Triangle Parkway, Suite 400, Norcross, Georgia 30092",
+                mapsQuery: "5445+Triangle+Parkway+Suite+400+Norcross+Georgia+30092",
+                mapEmbedUrl: "https://www.google.com/maps?q=5445+Triangle+Parkway+Suite+400+Norcross+Georgia+30092&output=embed",
+                phone: "+1-201-555-0123"
+            },
+            {
+                id: 2,
+                state: "New York",
+                name: "PharmaPlus New York",
+                address: "281 Broadway, New York, NY 10007",
+                mapsQuery: "281+Broadway+New+York+NY+10007",
+                mapEmbedUrl: "https://www.google.com/maps?q=281+Broadway+New+York+NY+10007&output=embed",
+                phone: "+1-212-555-0456"
+            },
+            {
+                id: 3,
+                state: "California",
+                name: "PharmaPlus California",
+                address: "1891 N Gaffey Street Suite E, San Pedro, CA 90731",
+                mapsQuery: "1891+N+Gaffey+Street+Suite+E+San+Pedro+CA+90731",
+                mapEmbedUrl: "https://www.google.com/maps?q=1891+N+Gaffey+Street+Suite+E+San+Pedro+CA+90731&output=embed",
+                phone: "+1-310-555-0789"
+            }
+        ];
+
+        const storeListEl = document.getElementById("storeList");
+        const mapIframe = document.getElementById("storeMap");
+        const mapStoreNameEl = document.getElementById("mapStoreName");
+        const openInMapsBtn = document.getElementById("openInMapsBtn");
+
+        let activeStoreId = null;
+
+        function renderStoreCards() {
+            storeListEl.innerHTML = "";
+            stores.forEach((store) => {
+                const card = document.createElement("article");
+                card.className = "store-card card shadow-sm";
+                card.dataset.id = store.id;
+
+                card.innerHTML = `
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline mb-1">
+              <h5 class="card-title h6 mb-0">${store.name}</h5>
+              <span class="badge rounded-pill bg-light border small">
+                ${store.state}
+              </span>
+            </div>
+            <p class="card-text mb-2 small">
+              ${store.address}
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-view-map">
+                <span class="me-1">🗺️</span> View on Map
+              </button>
+              <a href="tel:${store.phone}" class="btn btn-outline-primary btn-sm">
+                <span class="me-1">📞</span> Call Store
+              </a>
+            </div>
+          </div>
+        `;
+
+                card.addEventListener("click", (e) => {
+                    if (e.target.tagName.toLowerCase() === "a") return;
+                    if (e.target.closest(".btn-outline-primary")) return;
+                    setActiveStore(store.id);
+                });
+
+                const viewMapBtn = card.querySelector(".btn-view-map");
+                viewMapBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    setActiveStore(store.id);
+                });
+
+                storeListEl.appendChild(card);
+            });
+        }
+
+        function setActiveStore(storeId) {
+            const store = stores.find((s) => s.id === storeId);
+            if (!store) return;
+            activeStoreId = storeId;
+
+            mapIframe.src = store.mapEmbedUrl;
+            mapStoreNameEl.textContent = store.name + " – " + store.state;
+
+            document.querySelectorAll(".store-card").forEach((card) => {
+                card.classList.toggle("active", Number(card.dataset.id) === storeId);
+            });
+
+            openInMapsBtn.onclick = () => {
+                const url = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(store.address);
+                window.open(url, "_blank");
+            };
+        }
+
+        renderStoreCards();
+        if (stores.length > 0) {
+            setActiveStore(stores[0].id);
+        } else {
+            openInMapsBtn.disabled = true;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
