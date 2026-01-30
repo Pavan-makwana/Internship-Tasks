@@ -1,0 +1,132 @@
+/* 
+   ROOT COLOR THEME
+ */
+:root {
+  /* Primary Colors */
+  --primary-dark: #162153;   /* Header / Hero / Footer */
+  --primary-blue: #1491F2;   /* Buttons / CTA / Links */
+
+  /* Neutrals */
+  --white: #ffffff;
+  --light-bg: #f8f9fa;
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+
+  /* UI */
+  --border-radius: 999px;
+  --transition: all 0.3s ease;
+}
+
+/* GLOBAL RESET */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--white);
+}
+
+.navbar .nav-link {
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--primary-blue);
+}
+
+.navbar .dropdown-menu {
+  border: none;
+  border-radius: 8px;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: #0f7cd3;
+  border-color: #0f7cd3;
+}
+
+/* HERO SECTION */
+.hero,
+.hero-section {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 80px 0;
+}
+
+.hero h1,
+.hero-section h1 {
+  font-weight: 700;
+}
+
+.hero p,
+.hero-section p {
+  color: #dbe4ff;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 0;
+}
+
+.bg-light {
+  background-color: var(--light-bg) !important;
+}
+
+/*  ICON HIGHLIGHTS */
+.icon-box i {
+  color: var(--primary-blue);
+}
+
+/*  FORMS */
+.form-control {
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.2rem rgba(20, 145, 242, 0.25);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+footer a {
+  color: #dbe4ff;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: var(--primary-blue);
+}
+
+/*  UTILITIES */
+.text-primary {
+  color: var(--primary-blue) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-dark) !important;
+}
+
+.rounded-pill {
+  border-radius: var(--border-radius);
+}

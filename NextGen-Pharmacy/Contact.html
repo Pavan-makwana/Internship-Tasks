@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | NextGen Pharmaceutical Pvt Ltd</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<!-- HEADER  -->
+ <header>
+      <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+        <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="./index.html">
+        NextGen Pharmacy
+      </a>
+
+          <!-- Toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menu -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul
+              class="navbar-nav w-100 d-flex justify-content-between align-items-center nav-fill"
+            >
+              <li class="nav-item">
+                <a class="nav-link " href="./index.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./Product.html">Product</a>
+              </li>
+
+              <!-- Retail Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Retail
+                </a>
+                <ul class="dropdown-menu shadow">
+                  <li>
+                    <a class="dropdown-item" href="./Retail.html?city=newyork"
+                      >New York</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./Retail.html?city=newjersey"
+                      >New Jersey</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./Retail.html?city=california"
+                      >California</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="./Contact.html">Contact</a>
+              </li>
+
+              <li class="nav-item ms-lg-3">
+                <a
+                  href="tel:+919227995049"
+                  class="btn btn-primary rounded-pill px-4"
+                >
+                  Call Now
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<!-- MAIN -->
+<main class="flex-grow-1" style="padding-top:90px">
+
+  <!-- CONTACT HEADER -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold">Contact Us</h2>
+      <p class="text-muted">
+        Reach out to NextGen Pharmaceutical Pvt Ltd for business inquiries or support.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- COMPANY DETAILS -->
+        <div class="col-md-5">
+          <h5 class="fw-bold mb-3">Company Details</h5>
+
+          <p class="mb-2">
+            <strong>Company:</strong><br>
+            NextGen Pharmaceutical Pvt Ltd
+          </p>
+
+          <p class="mb-2">
+            <strong>Email:</strong><br>
+            <a href="mailto:info@nextgen.com">info@nextgen.com</a>
+          </p>
+
+          <p class="mb-2">
+            <strong>Phone:</strong><br>
+            +91 92279 95049
+          </p>
+
+          <p class="mb-0">
+            <strong>Address:</strong><br>
+            2660 Schuyler Ave. Ste. A,<br>
+            Lafayette, IN 47905,<br>
+            USA
+          </p>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="col-md-7">
+          <h5 class="fw-bold mb-3">Send Us a Message</h5>
+
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" placeholder="Enter your name" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Enter your email" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-control" placeholder="Enter your phone number" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                rows="4"
+                placeholder="Write your message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary rounded-pill px-5">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!--  FOOTER  -->
+<footer class="bg-primary text-white pt-4 pb-3 mt-auto">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-4">
+        <h5 class="fw-bold">NextGen Pharmacy</h5>
+        <p class="small">
+          Trusted pharmaceutical company providing quality medicines and services.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="./index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="./about.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="./Product.html" class="text-white text-decoration-none">Products</a></li>
+          <li><a href="./Retail.html" class="text-white text-decoration-none">Retail</a></li>
+          <li><a href="./Contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h6 class="fw-bold">Contact</h6>
+        <p class="small mb-1">Lafayette, IN, USA</p>
+        <p class="small mb-1">+91 92279 95049</p>
+        <p class="small">Mon–Sat: 9AM – 10PM</p>
+      </div>
+
+    </div>
+
+    <hr class="border-light" />
+    <div class="text-center small">
+      © 2026 NextGen Pharmaceutical Pvt Ltd. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
