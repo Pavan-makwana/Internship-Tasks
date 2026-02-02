@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Appointments</title>
+  <title>Admin Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link
@@ -11,21 +11,23 @@
   />
 </head>
 
-<body class="bg-light"> 
+<body class="bg-light">
 
 <div class="container mt-4">
-  <h3 class="text-center mb-4">Appointment List</h3>
+  <h3 class="text-center mb-4">Admin Dashboard</h3>
 
   <div class="table-responsive">
     <table class="table table-bordered align-middle text-center">
-      <thead class="table-primary">
+      <thead class="table-dark">
         <tr>
-          <th>Name</th>
+          <th>Appointment ID</th>
+          <th>Patient</th>
+          <th>Phone</th>
           <th>Doctor</th>
           <th>Date</th>
           <th>Time</th>
           <th>Status</th>
-          <th>Update</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody id="tableBody"></tbody>
@@ -44,12 +46,15 @@ async function loadAppointments() {
   data.forEach(a => {
     tbody.innerHTML += `
       <tr>
+        <td>${a.appointment_id}</td>
         <td>${a.name}</td>
+        <td>${a.phone}</td>
         <td>${a.doctor_name}</td>
         <td>${a.appointment_date}</td>
         <td>${a.appointment_time}</td>
         <td>
-          <select class="form-select" id="status-${a.appointment_id}">
+          <select class="form-select"
+            id="status-${a.appointment_id}">
             <option ${a.status === "Pending" ? "selected" : ""}>Pending</option>
             <option ${a.status === "Confirmed" ? "selected" : ""}>Confirmed</option>
             <option ${a.status === "Cancelled" ? "selected" : ""}>Cancelled</option>
@@ -58,7 +63,7 @@ async function loadAppointments() {
         </td>
         <td>
           <button class="btn btn-success btn-sm"
-            onclick="updateStatus(${a.appointment_id})">
+            onclick="updateStatus('${a.appointment_id}')">
             Update
           </button>
         </td>
@@ -76,7 +81,8 @@ async function updateStatus(id) {
     body: JSON.stringify({ status })
   });
 
-  loadAppointments(); 
+  alert("Status updated successfully");
+  loadAppointments();
 }
 
 loadAppointments();
