@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Appointment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-4">
+  <h4 class="text-center mb-3">Book Appointment</h4>
+
+  <form id="bookingForm" class="card p-4 mx-auto" style="max-width:600px">
+
+    <input class="form-control mb-2" name="name" placeholder="Full Name" required>
+    <input class="form-control mb-2" name="phone" placeholder="Mobile Number" required>
+    <input class="form-control mb-2" type="number" name="age" placeholder="Age" required>
+
+    <select class="form-select mb-2" name="gender" required>
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Others</option>
+    </select>
+
+    <select class="form-select mb-2" name="doctor_id" required>
+      <option value="">Select Doctor</option>
+      <option value="D001">Dr. Mehta – Cardiologist</option>
+      <option value="D002">Dr. Sharma – Dermatologist</option>
+      <option value="D003">Dr. Khan – Orthopedist</option>
+      <option value="D004">Dr. Joshi – Neurologist</option>
+      <option value="D005">Dr. Patel – Pediatrician</option>
+    </select>
+
+    <input class="form-control mb-2" type="date" name="appointment_date" required>
+    <input class="form-control mb-3" type="time" name="appointment_time" required>
+
+    <button class="btn btn-primary w-100">Submit Appointment</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = e.target;
+
+  const data = {
+    name: f.name.value,
+    phone: f.phone.value,
+    age: f.age.value,
+    gender: f.gender.value,
+    doctor_id: f.doctor_id.value,
+    appointment_date: f.appointment_date.value,
+    appointment_time: f.appointment_time.value
+  };
+
+  const res = await fetch("http://localhost:5000/api/appointments", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  const result = await res.json();
+  alert("Appointment submitted. Status: Pending");
+  f.reset();
+});
+</script>
+
+</body>
+</html>
