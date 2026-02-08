@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./User.css";
 
 function User() {
   const [activeCategory, setActiveCategory] = useState("Mobiles");
+  const navigate = useNavigate();
 
   const data = {
     Mobiles: [
@@ -26,23 +28,23 @@ function User() {
       { name: "Camera", price: "44,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgKrl4IkE0EMyCxzbMbpeGWbH-p9CncrUTuQ&s" },
       { name: "Smart Watch", price: "3,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_qOM-SBTS5VpoDLCAqtcDoLTEmFmAehwt5Q&s" },
       { name: "Tablet", price: "21,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-BiXvqfQ8e1AAuhLpGkoFRpayuiMlwU_Ukw&s" },
-      { name: "Dekstop Computer", price: "45,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlVzwTOtdDvhoHIuggnt6WMy_8q11IsJ8Bzg&s" },
+      { name: "Desktop Computer", price: "45,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlVzwTOtdDvhoHIuggnt6WMy_8q11IsJ8Bzg&s" },
       { name: "Smart TV", price: "38,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6hgQa0NDO3C0zrKx0C0oDjmfYBzO8KhZTBg&s" },
       { name: "Printer", price: "8,999", img: "https://vsprod.vijaysales.com/media/catalog/product/1/4/145354-image1_5.jpg" },
-      { name: "Bluthooth Speaker", price: "1,999", img: "https://www.thevaluestore.in/image/cache/catalog/2024/Portronics/Speaker/pixel-3-1-1000x1000.jpg" },
+      { name: "Bluetooth Speaker", price: "1,999", img: "https://www.thevaluestore.in/image/cache/catalog/2024/Portronics/Speaker/pixel-3-1-1000x1000.jpg" },
       { name: "Gaming Console", price: "34,999", img: "https://5.imimg.com/data5/HC/HK/MY-11391592/gaming-console-500x500.jpg" },
-      { name: "Microvave Oven", price: "12,999", img: "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Small%20Appliances/Microwave%20or%20OTG/Images/221296_0_lawyut.png" },
-      { name: "Washingmachine", price: "24,999", img: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/9/AmazonStores/A21TJRUUN4KGV/2ecdf16e26d31e502c023986902c4246.w1500.h1500._CR0%2C0%2C1500%2C1500_SX750_SY750_.jpg" },
+      { name: "Microwave Oven", price: "12,999", img: "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Small%20Appliances/Microwave%20or%20OTG/Images/221296_0_lawyut.png" },
+      { name: "Washing Machine", price: "24,999", img: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/9/AmazonStores/A21TJRUUN4KGV/2ecdf16e26d31e502c023986902c4246.w1500.h1500._CR0%2C0%2C1500%2C1500_SX750_SY750_.jpg" },
     ],
 
     Fashion: [
-      { name: "Shirt", price: 999, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQahI7YhiozlQMWaNUzw0aYPm_zLH1TU4Rqow&s" },
+      { name: "Shirt", price: "999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQahI7YhiozlQMWaNUzw0aYPm_zLH1TU4Rqow&s" },
       { name: "Jeans", price: "1,799", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ10XN7c7RPhV6zR5syuk5w4UPsG28vuNOf3Q&s" },
       { name: "Shoes", price: "2,499", img: "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/23976344/2023/7/11/cf6d6b67-186a-444a-a2a7-49afebad8a0c1689091586156HRXbyHrithikRoshanWomenOffWhiteMeshRunningNon-MarkingShoes1.jpg" },
       { name: "Jacket", price: "2,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJNQkxCdamaupbiyTDRrtYU0SOpZW8XYY4OA&s" },
-      { name: "T-Shirt", price: 799, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwfosUVpAHlLdtOlh3nt9v5DXxj7mP7zrLfw&s" },
+      { name: "T-Shirt", price: "799", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwfosUVpAHlLdtOlh3nt9v5DXxj7mP7zrLfw&s" },
       { name: "Purse", price: "1,499", img: "https://rukminim2.flixcart.com/image/480/640/xif0q/hand-messenger-bag/f/r/g/ext-hb-178-11-2-hb-178-handbag-exotic-8-5-original-imahc7m4g866veyy.jpeg?q=90" },
-      { name: "Sunglass", price: 999, img: "https://rukminim2.flixcart.com/image/480/640/xif0q/sunglass/p/h/q/medium-pathan-sunglass-17rrg-15-shade-house-original-imah3zydf5ac68gp.jpeg?q=90" },
+      { name: "Sunglass", price: "999", img: "https://rukminim2.flixcart.com/image/480/640/xif0q/sunglass/p/h/q/medium-pathan-sunglass-17rrg-15-shade-house-original-imah3zydf5ac68gp.jpeg?q=90" },
       { name: "Hoodie", price: "1,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5E1wrB1j87iBm9skLgWBLvb678M-2nkoLAw&s" },
       { name: "Dress", price: "2,499", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT9Xk9OpSfesyDbuJp0aAYb2EWc4I3Abcx1w&s" },
       { name: "Heels", price: "2,199", img: "https://img.tatacliq.com/images/i13/437Wx649H/MP000000019435254_437Wx649H_202309270611371.jpeg" },
@@ -59,7 +61,7 @@ function User() {
       { name: "Carpet", price: "3,999", img: "https://princecarpets.in/cdn/shop/files/91tyRSkmjEL_efc029f2-7824-4435-9fd9-dcf0281e8a85.jpg" },
       { name: "Wall Clock", price: "1,999", img: "https://ikiru.in/cdn/shop/files/buy-wall-clock-sullivan-the-wall-clock-for-living-room-or-home-showpiece-by-de-maison-decor-on-ikiru-online-store-1.jpg" },
       { name: "Mirror", price: "3,499", img: "https://mirrorwalla.com/cdn/shop/files/IMG-7497.png" },
-      { name: "Show Rack", price: "2,999", img: "https://m.media-amazon.com/images/I/711xF9EkDhL._AC_UF894,1000_QL80_.jpg" },
+      { name: "Shoe Rack", price: "2,999", img: "https://m.media-amazon.com/images/I/711xF9EkDhL._AC_UF894,1000_QL80_.jpg" },
       { name: "Table", price: "4,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcXisMcJqYF1g7R93RBKvhiaNzuaHARRmnQw&s" },
       { name: "Wardrobe", price: "15,999", img: "https://www.nilkamalfurniture.com/cdn/shop/files/MWILLY3DWBWOMNWG_06.webp" },
     ],
@@ -71,23 +73,6 @@ function User() {
 
   return (
     <>
-      {/* NAVBAR */}
-      <div className="navbar">
-        <div className="logo">MyShop</div>
-
-        <div className="search-container">
-          <input type="text" placeholder="Search for products..." />
-          <button className="search-btn">Search</button>
-        </div>
-
-        <div className="menu">
-          <span className="menu-item">Home</span>
-          <span className="menu-item">Cart</span>
-          <button className="login-btn">Login</button>
-        </div>
-      </div>
-
-      {/* CATEGORY BAR */}
       <div className="category-bar">
         {Object.keys(data).map((cat) => (
           <span
@@ -100,7 +85,6 @@ function User() {
         ))}
       </div>
 
-      {/* PRODUCTS */}
       <div className="products-section">
         <h3>{activeCategory} Products</h3>
 

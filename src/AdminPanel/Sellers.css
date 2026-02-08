@@ -1,0 +1,106 @@
+/* Page background */
+.sellers-page {
+  padding: 10px;
+  background: #f8fafc; /* very light gray */
+}
+
+/* Page heading */
+.sellers-page h2 {
+  margin-bottom: 26px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Grid layout */
+.seller-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Card – SAME pleasant color for all */
+.seller-detail-card {
+  background: #e0f2fe; /* soft sky blue */
+  padding: 22px;
+  border-radius: 16px;
+  color: #0f172a;
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover */
+.seller-detail-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(2, 132, 199, 0.35);
+}
+
+/* Card header */
+.seller-detail-card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #075985; /* deep blue */
+}
+
+/* Order ID */
+.order-id {
+  font-size: 13px;
+  color: #0369a1;
+  margin: 6px 0 14px;
+}
+
+/* Info box */
+.info {
+  background: #f0f9ff; /* lighter blue */
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+.info p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #0f172a;
+}
+
+/* Stats section */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  gap: 10px;
+}
+
+/* Individual stat */
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 14px 6px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+/* Stat label */
+.stat span {
+  display: block;
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+/* Stat number */
+.stat strong {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Cancelled highlight */
+.stat.cancelled strong {
+  color: #dc2626; /* red */
+}
+
+/* Returned highlight */
+.stat.returned strong {
+  color: #d97706; /* amber */
+}

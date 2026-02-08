@@ -1,0 +1,108 @@
+/* Page title */
+.orders-page h2 {
+  margin-bottom: 18px;
+  font-size: 24px;
+  color: #1f2937;
+}
+
+/* Table */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.orders-table thead {
+  background: #1f2937;
+  color: white;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 13px;
+}
+
+/* Rows */
+.orders-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.orders-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Status */
+.status {
+  font-weight: 600;
+}
+
+.status.placed {
+  color: #f59e0b; /* orange */
+}
+
+.status.shipped {
+  color: #2563eb; /* blue */
+}
+
+.status.pending {
+  color: #ca8a04; /* yellow */
+}
+
+/* Payment badge */
+.badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.paid {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge.cod {
+  background: #fde68a;
+  color: #92400e;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+/* Accept */
+.btn.accept {
+  background: #10b981;
+  color: white;
+}
+
+/* Reject */
+.btn.reject {
+  background: #ef4444;
+  color: white;
+}
+
+/* View */
+.btn.view {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Pending */
+.btn.pending {
+  background: #facc15;
+  color: #78350f;
+  cursor: not-allowed;
+}

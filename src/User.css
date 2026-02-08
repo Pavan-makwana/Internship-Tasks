@@ -52,9 +52,14 @@ body {
 }
 
 .menu-item {
+  background: transparent;
+  border: none;
   color: #e5e7eb;
+  font-size: 16px;
   cursor: pointer;
+  padding: 6px 10px;
 }
+
 
 .login-btn {
   padding: 10px 20px;
@@ -140,7 +145,7 @@ body {
 .add-cart-btn {
   padding: 8px 12px;
   border: none;
-  background: #2563eb;
+  background: #1f2023;
   color: white;
   font-weight: 600;
   border-radius: 6px;
@@ -150,4 +155,50 @@ body {
 
 .add-cart-btn:hover {
   background: #1d4ed8;
+}
+
+.footer {
+  background: #1f2937;
+  color: #e5e7eb;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px 60px;
+}
+
+.footer-section h4 {
+  margin-bottom: 12px;
+  color: #38bdf8;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-section ul li:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+  background: #111827;
 }

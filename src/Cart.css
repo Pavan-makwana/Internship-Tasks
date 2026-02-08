@@ -1,0 +1,11 @@
+.cart-container {
+  min-height: 60vh;
+  padding: 60px;
+  text-align: center;
+}
+
+.empty-cart {
+  margin-top: 40px;
+  color: #f0eaea;
+  font-size: 16px;
+}

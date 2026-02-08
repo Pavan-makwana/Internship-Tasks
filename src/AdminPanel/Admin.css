@@ -1,0 +1,45 @@
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.sidebar {
+  width: 220px;
+  background: #1f2937;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.sidebar a:hover {
+  color: #38bdf8;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
